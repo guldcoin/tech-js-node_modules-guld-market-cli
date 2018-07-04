@@ -10,7 +10,10 @@ program
   .option('-r, --recipient', 'The recipient of a message or transaction.')
   .option('-f, --fingerprint', 'The PGP fingerprint to sign with.')
   // .option('-q, --quiet', '')
-  .command('dir', 'Get the git directory of a path.')
+  .command('path', 'Blocktree path resolution tools.')
   .command('config', 'Configuration manager for git config files.')
+  .command('host', 'Configuration manager for git hosts.')
+  // .command('remote', 'Manage git remotes the guld way.')
+
 
 program.parse(process.argv)

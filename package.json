@@ -22,7 +22,8 @@
   "dependencies": {
     "commander": "^2.16.0",
     "guld-git-config-cli": "^1.0.1",
-    "guld-git-dir": "^1.0.0"
+    "guld-git-host-cli": "^1.2.0",
+    "guld-git-path": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^5.0.1",

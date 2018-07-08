@@ -21,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.16.0",
+    "guld-git": "file:../guld-git",
     "guld-git-config-cli": "^1.0.1",
     "guld-git-host-cli": "^1.2.0",
     "guld-git-path": "^1.0.0"

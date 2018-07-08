@@ -1,7 +1,18 @@
 #!/usr/bin/env node
 const program = require('commander')
 const path = require('path')
-const { add, remove, log, status, commit } = require('guld-git')
+const {
+  init,
+  status,
+  log,
+  add,
+  remove,
+  commit,
+  clone,
+  fetch,
+  push,
+  pull
+} = require('guld-git')
 const VERSION = require('./package.json').version
 
 /* eslint-disable no-console */
@@ -51,5 +62,14 @@ program
     await commit(process.cwd(), message)
     console.log('Ok.')
   })
+program
+  .command('push [remote] [branch]')
+  .description('Update remote refs along with associated objects')
+  .action(async (remote, branch, options) => {
+    await push(process.cwd(), remote, branch)
+    console.log('Ok.')
+  })
+
+
 /* eslint-enable no-console */
 program.parse(process.argv)

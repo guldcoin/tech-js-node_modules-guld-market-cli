@@ -35,6 +35,18 @@ program
     else add(file, process.cwd()).then(console.log('Ok.'))
   })
 program
+  .command('init')
+  .description('Create an empty Git repository or reinitialize an existing one.')
+  .action(async (options) => {
+    await remove(process.cwd())
+  })
+program
+  .command('clone [url] [directory]')
+  .description('Clone a repository into a new directory.')
+  .action(async (url, directory, options) => {
+    await clone(process.cwd(), directory, url)
+  })
+program
   .command('remove <file>')
   .alias('delete')
   .description('Remove files from the git working directory.')
@@ -64,13 +76,26 @@ program
     console.log('Ok.')
   })
 program
+  .command('fetch [remote] [branch]')
+  .description('Download objects and refs from another repository.')
+  .action(async (remote, branch, options) => {
+    await fetch(process.cwd(), remote, branch)
+    console.log('Ok.')
+  })
+program
   .command('push [remote] [branch]')
-  .description('Update remote refs along with associated objects')
+  .description('Update remote refs along with associated objects.')
   .action(async (remote, branch, options) => {
     await push(process.cwd(), remote, branch)
     console.log('Ok.')
   })
-
-
+program
+  .command('pull [remote] [branch]')
+  .description('Fetch from and integrate with another repository or a local branch.')
+  .action(async (remote, branch, options) => {
+    await pull(process.cwd(), remote, branch)
+    console.log('Ok.')
+  })
 /* eslint-enable no-console */
+
 program.parse(process.argv)

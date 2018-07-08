@@ -48,7 +48,8 @@ program
   .command('commit [message]')
   .description('Stores the current contents of the index in a new commit along with a log message from the user describing the changes.')
   .action(async (message, options) => {
-    (await commit(process.cwd(), message)).then(console.log('Ok.'))
+    await commit(process.cwd(), message)
+    console.log('Ok.')
   })
 /* eslint-enable no-console */
 program.parse(process.argv)

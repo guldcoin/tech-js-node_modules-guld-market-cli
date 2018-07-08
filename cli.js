@@ -53,7 +53,8 @@ program
   .command('status [file]')
   .description('Get the status of a file in the working directory.')
   .action(async (file, options) => {
-    console.log((await status(file, process.cwd())).join('\n'))
+    var stat = await status(file, process.cwd())
+    if (stat) console.log(stat.join('\n'))
   })
 program
   .command('commit [message]')

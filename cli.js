@@ -2,7 +2,7 @@
 const program = require('commander')
 const path = require('path')
 const {
-  init,
+  // init,
   status,
   log,
   add,

@@ -1,6 +1,6 @@
 {
   "name": "guld-git-cli",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Guld standardized CLI for git.",
   "bin": {
     "guld-git": "./cli.js"
@@ -21,10 +21,10 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.16.0",
-    "guld-git": "^0.2.7",
-    "guld-git-config-cli": "^1.0.6",
-    "guld-git-host-cli": "^1.3.7",
-    "guld-git-path": "^1.0.7"
+    "guld-git": "^0.2.8",
+    "guld-git-config-cli": "^1.0.7",
+    "guld-git-host-cli": "^1.3.8",
+    "guld-git-path": "^1.0.8"
   },
   "devDependencies": {
     "eslint": "^5.1.0",

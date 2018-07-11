@@ -1,6 +1,6 @@
 {
   "name": "guld-git-cli",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Guld standardized CLI for git.",
   "bin": {
     "guld-git": "./cli.js"

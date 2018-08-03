@@ -21,7 +21,7 @@
     "coinmarketcap-api": "^2.3.2",
     "commander": "^2.16.0",
     "guld-fs": "^1.2.15",
-    "ledger-types": "^1.3.1",
+    "ledger-types": "^1.4.0",
     "user-home": "^2.0.0"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "guld-market-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Guld market command line interface.",
   "bin": {
     "guld-market": "./cli.js"

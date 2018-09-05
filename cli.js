@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const VERSION = require('./package.json').version
 const program = require('commander')
 const path = require('path')
 const { commodity } = require('ledger-types')
@@ -7,13 +6,15 @@ const home = require('user-home')
 const CoinMarketCap = require('coinmarketcap-api')
 const client = new CoinMarketCap()
 const { getFS } = require('guld-fs')
+const thispkg = require(`${__dirname}/package.json`)
+const runCLI = require('guld-cli-run')
 var fs
 
 /* eslint-disable no-console */
 program
-  .name('guld-market')
-  .version(VERSION)
-  .description('Guld market information and tools.')
+  .name(thispkg.name.replace('-cli', ''))
+  .version(thispkg.version)
+  .description(thispkg.description)
   .command('price [asset]')
   .description('Get the price of the given asset (Default: GULD)')
   .action(async (asset, options) => {
@@ -52,5 +53,5 @@ P ${datestr} ${timestr} USD ${invprice} ${asset.toUpperCase()}
     }
   })
 /* eslint-enable no-console */
-
-program.parse(process.argv)
+runCLI.bind(program)()
+module.exports = program

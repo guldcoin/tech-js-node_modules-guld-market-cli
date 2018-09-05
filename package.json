@@ -3,17 +3,20 @@
   "version": "0.1.2",
   "description": "Guld market command line interface.",
   "bin": {
-    "guld-market": "./cli.js"
+    "guld-market": "cli.js"
   },
   "scripts": {
     "lint": "eslint --env browser *.js*",
-    "fix": "eslint --fix *.js*"
+    "fix": "eslint --fix *.js*",
+    "test": "mocha test/*.js",
+    "test:lint": "npm run lint && npm run test"
   },
   "keywords": [
     "guld",
     "git",
     "cli",
-    "market"
+    "market",
+    "node"
   ],
   "author": "isysd",
   "license": "MIT",
@@ -34,7 +37,8 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.1.0",
     "mocha": "^5.2.0",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "chai": "^4.1.2"
   },
   "pre-commit": [
     "lint"
@@ -43,7 +47,7 @@
   "engines": {
     "node": ">=7"
   },
-  "homepage": "https://github.com/isysd/tech-js-node_modules-guld-market-cli#readme",
+  "homepage": "https://guld.tech/cli/guld-market-cli.html",
   "preferGlobal": true,
-  "repository": "git@github.com:isysd/tech-js-node_modules-guld-market-cli.git"
+  "repository": "https://bitbucket.org/guld/tech-js-node_modules-guld-market-cli"
 }
